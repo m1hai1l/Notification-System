@@ -1,0 +1,11 @@
+services:
+  app:
+    build: ./Sender-service
+    ports:
+      - "4002:4002"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    name: app-network

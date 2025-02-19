@@ -1,0 +1,24 @@
+services:
+  app:
+    build: ./Service-producer
+    ports:
+      - "4001:4001"
+    depends_on:
+      - pg 
+    networks:
+      - app-network
+
+  pg: 
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: Notification System
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: lira
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    name: app-network

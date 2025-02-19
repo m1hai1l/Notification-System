@@ -1,0 +1,11 @@
+services:
+  app:
+    build: ./rebalancer
+    ports:
+      - "4010:4010"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    name: app-network

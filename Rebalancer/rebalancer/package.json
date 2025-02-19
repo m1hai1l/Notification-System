@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "pg": "^8.13.3",
+    "sequelize": "^6.37.5"
+  }
+}
